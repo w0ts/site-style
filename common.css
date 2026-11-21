@@ -1,4 +1,4 @@
-/* common.css: the one style of the three sites (jank, Optimist, DN2 wishes). Tokens + shared components, neutral names.
+/* common.css: the one style of the three sites (w0ts: Jank, Optimist, DN2 Wishes, Track Kommander). Tokens + shared components, neutral names.
    A site sets only its accent, three variables (and adds the few things that are truly its own):
      :root { --accent: #da92cc; --accent-text-l: #b13c9a; --accent-text-d: #da92cc; }
    Light and dark follow the system; data-theme="light"|"dark" on <html> (or on any element) forces one.
