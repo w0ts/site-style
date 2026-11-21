@@ -130,16 +130,16 @@ button.info:hover:not(:disabled) { color: var(--ink); border-color: var(--ink); 
 .tabs > *:hover:not(:disabled) { background: var(--hover); }
 
 /* ---- tags (levels, counts, flags): neutral; .accent filled; .outline accent outline; .warn / .err outlined */
-.tag { display: inline-flex; align-items: center; gap: 3px; height: 20px; padding: 0 7px; font-size: 12px; background: var(--off); color: var(--dim); border-radius: 4px; white-space: nowrap; vertical-align: 1px; font-variant-numeric: tabular-nums; }
+.tag { text-transform: none; letter-spacing: 0; font-weight: 400; display: inline-flex; align-items: center; gap: 3px; height: 20px; padding: 0 7px; font-size: 12px; background: var(--off); color: var(--dim); border-radius: 4px; white-space: nowrap; vertical-align: 1px; font-variant-numeric: tabular-nums; }
 .tag.accent { background: var(--accent); color: var(--on); }
 .tag.outline { background: transparent; color: var(--accent-text); box-shadow: inset 0 0 0 1px var(--accent-text); }
 .tag.warn { background: transparent; color: var(--warn); box-shadow: inset 0 0 0 1px var(--warn); }
 .tag.err { background: transparent; color: var(--err); box-shadow: inset 0 0 0 1px var(--err); }
 
 /* ---- messages: .msg is one boxed line with a left bar (neutral, .ok, .warn, .err); .banner a full-width strip (.err = red: a TEST build) */
-.msg { display: flex; flex-wrap: wrap; gap: 4px var(--sp-2); align-items: baseline; margin: 0 0 var(--sp-2); padding: var(--sp-2) var(--sp-3); background: var(--bg); border-left: 3px solid var(--line); border-radius: 0 var(--r-ctl) var(--r-ctl) 0; font-size: 14px; overflow-wrap: anywhere; }
+.msg { display: block; margin: 0 0 var(--sp-2); padding: var(--sp-2) var(--sp-3); background: var(--bg); border-left: 3px solid var(--line); border-radius: 0 var(--r-ctl) var(--r-ctl) 0; font-size: 14px; overflow-wrap: anywhere; }
 section .msg, .card .msg { background: var(--off); }
-.msg > b:first-child { flex: none; text-transform: uppercase; font-size: 12px; letter-spacing: .04em; color: var(--dim); }
+.msg > b:first-child { margin-right: var(--sp-2); text-transform: uppercase; font-size: 12px; letter-spacing: .04em; color: var(--dim); }
 .msg.ok { border-color: var(--accent); background: var(--accent-soft); } .msg.ok > b:first-child { color: var(--accent-text); }
 .msg.warn { border-color: var(--warn); background: var(--warn-soft); } .msg.warn > b:first-child { color: var(--warn); }
 .msg.err { border-color: var(--err); background: var(--err-soft); } .msg.err > b:first-child { color: var(--err); }
@@ -213,7 +213,7 @@ ul.list { list-style: none; margin: 0; padding: 0; }
 
 /* ---- file rows and drop targets: .file a row with a name and a button; .over while dragging onto it */
 .files { display: grid; gap: var(--sp-2); }
-.file { display: grid; grid-template-columns: 1fr auto; gap: var(--sp-1) var(--sp-3); align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-ctl); padding: var(--sp-2) var(--sp-3); }
+.file { font-size: 14px; color: var(--ink); display: grid; grid-template-columns: 1fr auto; gap: var(--sp-1) var(--sp-3); align-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-ctl); padding: var(--sp-2) var(--sp-3); }
 .file small { color: var(--dim); grid-column: 1 / -1; overflow-wrap: anywhere; font-size: 13px; }
 .file.over, .drop.over { border-color: var(--accent); background: var(--accent-soft); }
 .drop { border: 1px dashed var(--dim); border-radius: var(--r-ctl); padding: var(--sp-5); text-align: center; color: var(--dim); }
